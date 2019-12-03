@@ -45,6 +45,15 @@
                                 <label>Images</label>
                                 <input type="file" name="fImages">
                             </div>
+                        
+                            <div>
+                                @for($i = 1; $i <= 3 ; $i++)
+                                <div class="form-group">
+                                    <label>Product Image Detail {!! $i !!}</label>
+                                    <input type="file" name="fProductDetail[]"/>
+                                </div>
+                                @endfor
+                            </div>
 
                             <div class="form-group">
                                 <label>Product Description</label>
@@ -59,8 +68,11 @@
                                     <input name="rdoStatus" value="2" type="radio">Invisible
                                 </label>
                             </div>
+                           
+                            <div>
                             <button type="submit" class="btn btn-default">Product Add</button>
                             <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
                         <form>
                     </div>
                 </div>

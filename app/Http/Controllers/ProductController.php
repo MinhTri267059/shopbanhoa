@@ -36,7 +36,20 @@ class ProductController extends Controller
         $product->content = $request->txtContent;
         $product->description = $request->txtDescription;
         $product->image=$file_name;
-        $product->cate_id = $request->txtCateId;       
+        $product->cate_id = $request->txtCateId;
+
+        if ($request->hasFile('fProductDetail')) {
+            //print_r(Input::file('fProductDetail'));
+            foreach ($request->file('fProductDetail') as $file_image) {
+                $product_img = new Product_image();
+                if (isset($file_image)) {
+                    $product_img->image = $file_image->getClientOriginalName();
+                    $product_img->product_id = $request->txtCateId;
+                    $file_image->move('../resources/upload/detail',$file_image->getClientOriginalName());
+                    $product_img->save();
+                }
+            }
+        }       
         
         $product->save();
         return redirect('admin/product/list')->with('thongbao','Thêm thành công');        
