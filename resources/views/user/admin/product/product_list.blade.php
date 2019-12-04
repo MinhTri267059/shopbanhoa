@@ -30,7 +30,7 @@
                                     <td>{{$pro->price}}</td>
                                     <td>{{$pro->intro}}</td>
                                     <td>{{$pro->status}}</td>
-                                    <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/product/delete/{{$pro->id}}"> Delete</a></td>
+                                    <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick=" return xacnhanxoa('Are you sure you want to delete?')" href="admin/product/delete/{{$pro->id}}"> Delete</a></td>
                                     <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/product/edit/{{$pro->id}}">Edit</a></td>
                                 </tr>
                             @endforeach

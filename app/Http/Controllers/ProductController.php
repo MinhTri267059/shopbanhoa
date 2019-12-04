@@ -61,8 +61,15 @@ class ProductController extends Controller
     public function postEdit(){
     	return view('user.admin.product.product_edit');
     }
-    public function getDelete(){
-        return view('user.admin.product.product_edit');
+    public function getDelete($id){
+        // $product_detail = Product::find($id)->product_image->toArray();
+        // foreach ($product_detail as $value) {
+        //     File::delete('../resources/upload/detail/'.$value["image"]);
+        // }
+        $product = Product::find($id);
+        File::delete('../resources/upload/'.$product->image);
+        $product->delete($id);
+        return redirect('admin/product/list')->with('thongbao','xóa thành công');
     }
 
 }
