@@ -5,49 +5,64 @@
                 <div class="row" style="margin-left: 100px">
                     <div class="col-lg-12">
                         <h1 class="page-header">Product
-                            <small>Edit</small>
+                            <small>{{$product->name}}</small>
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
-                        <form action="" method="POST">
+                        @if(count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $err)
+                                    {{$err}}<br>
+                                @endforeach
+                            </div>
+                        @endif
+
+                        @if(session('thongbao'))
+                            <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                        @endif
+                        <form action="admin/product/edit/{{$product->id}}" method="POST"  enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="{{csrf_token()}} "/>
                             <div class="form-group">
                                 <label>Name</label>
-                                <input class="form-control" name="txtName" placeholder="Please Enter Username" />
+                                <input class="form-control" name="txtName" placeholder="Please Enter Username" value="{{$product->name}}" />
                             </div>
                             <div class="form-group">
                                 <label>Price</label>
-                                <input class="form-control" name="txtPrice" placeholder="Please Enter Password" />
+                                <input class="form-control" name="txtPrice" placeholder=""value="{{$product->price}}" />
+                            </div>
+                            <div class="form-group">
+                                <label>Price New</label>
+                                <input class="form-control" name="txtPriceNew" placeholder=""value="{{$product->price_new}}" />
+                            </div>
+                            <div class="form-group">
+                                <label>Status</label>
+                                <input class="form-control" name="txtStatus" placeholder=""value="{{$product->status}}" />
                             </div>
                             <div class="form-group">
                                 <label>Intro</label>
-                                <textarea class="form-control" rows="3" name="txtIntro"></textarea>
+                                <textarea id="demo" class="ckeditor" rows="3" name="txtIntro">{{$product->intro}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Content</label>
-                                <textarea class="form-control" rows="3" name="txtContent"></textarea>
+                                <textarea id="demo" class="ckeditor" name="txtContent">{{$product->content}}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>Images</label>
+                                <label>Images</label><br>
+                                <img src="../resources/upload/{{$product->image}}" alt="ads1">
                                 <input type="file" name="fImages">
                             </div>
                             <div class="form-group">
-                                <label>Product Keywords</label>
-                                <input class="form-control" name="txtOrder" placeholder="Please Enter Category Keywords" />
+                                <label>Category ID</label>
+                                <input class="form-control" name="txtCateId" placeholder="Please Enter Category Keywords" value="{{$product->cate_id}}" />
                             </div>
                             <div class="form-group">
                                 <label>Product Description</label>
-                                <textarea class="form-control" rows="3"></textarea>
+                                <textarea id="demo" class="ckeditor" name="txtDescription" rows="3">{{$product->description}}</textarea>
                             </div>
-                            <div class="form-group">
-                                <label>Product Status</label>
-                                <label class="radio-inline">
-                                    <input name="rdoStatus" value="1" checked="" type="radio">Visible
-                                </label>
-                                <label class="radio-inline">
-                                    <input name="rdoStatus" value="2" type="radio">Invisible
-                                </label>
-                            </div>
+                            
                             <button type="submit" class="btn btn-default">Product Edit</button>
                             <button type="reset" class="btn btn-default">Reset</button>
                         <form>

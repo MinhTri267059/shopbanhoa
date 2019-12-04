@@ -47,11 +47,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Intro</label>
-                                <textarea class="form-control" rows="3" name="txtIntro"></textarea>
+                                <textarea id="demo" class="ckeditor" name="txtIntro"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Content</label>
-                                <textarea class="form-control" rows="3" name="txtContent"></textarea>
+                                <textarea id="demo" class="ckeditor"name="txtContent"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Images</label>
@@ -69,18 +69,9 @@
 
                             <div class="form-group">
                                 <label>Product Description</label>
-                                <textarea class="form-control" rows="3" name="txtDescription"></textarea>
+                                <textarea id="demo" class="ckeditor" name="txtDescription"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label>Product Status</label>
-                                <label class="radio-inline">
-                                    <input name="rdoStatus" value="1" checked="" type="radio">Visible
-                                </label>
-                                <label class="radio-inline">
-                                    <input name="rdoStatus" value="2" type="radio">Invisible
-                                </label>
-                            </div>
-                           
+                            
                             <div>
                             <button type="submit" class="btn btn-default">Product Add</button>
                             <button type="reset" class="btn btn-default">Reset</button>

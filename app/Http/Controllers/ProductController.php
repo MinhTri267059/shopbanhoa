@@ -55,11 +55,35 @@ class ProductController extends Controller
         return redirect('admin/product/list')->with('thongbao','Thêm thành công');        
     }
 
-    public function getEdit(){
-    	return view('user.admin.product.product_edit');
+    public function getEdit($id){
+    	$product = Product::find($id);
+        return view('user.admin.product.product_edit',['product'=>$product]);
     }
-    public function postEdit(){
-    	return view('user.admin.product.product_edit');
+    public function postEdit(Request $request,$id){
+        $product=Product::find($id);
+        // $product->name = $request->txtName;
+        // $product->alias = changeTitle($request->txtName);
+        // $product->price = $request->txtPrice;
+        // $product->price_new = $request->txtPriceNew;
+        // $product->status = $request->txtStatus;
+        // $product->intro = $request->txtIntro;
+        // $product->content = $request->txtContent;
+        // $product->description = $request->txtDescription;
+        // $product->cate_id = $request->txtCateId;
+        if($request->hasFile('fImages'))
+        {   
+           
+            File::delete('../resources/upload/'.$product->image);
+            
+            $file= $request->file('fImages');
+            $file_name = $file->getClientOriginalName();
+            $file->move('../resources/upload',$file_name);
+            $product->image=$file_name;
+        }
+        $product->save();
+        return redirect('admin/product/list')->with('thongbao','sửa thành công');   
+
+    	
     }
     public function getDelete($id){
         // $product_detail = Product::find($id)->product_image->toArray();
