@@ -26,5 +26,10 @@ class PageController extends Controller
     	return view('user.page.lienhe');
     }
 
-    
+    public function getDangNhap(){
+        return view('user.login');
+    }
+    public function getDangKy(){
+        return view('user.signup');
+    }
 }

@@ -35,19 +35,19 @@
 				<nav class="main-menu">
 					<ul class="l-inline ov">
 						<li><a href="#">Dashboard</a></li>
-						<li><a href="#">Category</a>
+						<li><a href="admin/category/list">Category</a>
 							<ul class="sub-menu">
 								<li><a href="admin/category/list">List Category</a></li>
 								<li><a href="admin/category/add">Add Category</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Product</a>
+						<li><a href="admin/product/list">Product</a>
 							<ul class="sub-menu">
 								<li><a href="admin/product/list">List Product</a></li>
 								<li><a href="admin/product/add">Add Product</a></li>
 							</ul>
 						</li>
-						<li><a href="#">User</a>
+						<li><a href="admin/user/list">User</a>
 							<ul class="sub-menu">
 								<li><a href="admin/user/list">List User</a></li>
 								<li><a href="admin/user/add">Add User</a></li>

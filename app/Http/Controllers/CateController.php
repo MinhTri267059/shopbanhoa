@@ -32,7 +32,7 @@ class CateController extends Controller
         $category->description=$request->txtDescription;
         $category->save();
 
-        return redirect('admin/category/add')->with('thongbao','Thêm thành công');
+        return redirect('admin/category/list')->with('thongbao','Thêm thành công');
     	//return view('user.admin.category.cate_add');
     }
     public function getEdit($id){

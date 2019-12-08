@@ -9,11 +9,25 @@
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
+
                     <div class="col-lg-7" style="padding-bottom:120px">
-                        <form action="" method="POST">
+                        @if(count($errors)>0)
+                            <div>
+                                @foreach($errors->all() as $err)
+                                    {{$err}}<br>
+                                @endforeach
+                            </div>
+                        @endif
+                        @if(session('thongbao'))
+                            <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                        @endif
+                        <form action="admin/user/add" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="{{csrf_token()}} "/>
                             <div class="form-group">
                                 <label>Username</label>
-                                <input class="form-control" name="txtUser" placeholder="Please Enter Username" />
+                                <input class="form-control" name="txtUser" placeholder="Please Enter Username"  />
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
@@ -24,9 +38,31 @@
                                 <input type="password" class="form-control" name="txtRePass" placeholder="Please Enter RePassword" />
                             </div>
                             <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" name="txtFName" placeholder="Please Enter Full Name" />
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <label class="radio-inline">
+                                    <input name="rdoGender" value="1" checked="" type="radio">Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="rdoGender" value="0" type="radio">Female
+                                </label>
+                            </div>
+                            <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" class="form-control" name="txtEmail" placeholder="Please Enter Email" />
                             </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" class="form-control" name="txtAddress" placeholder="Please Enter Address" />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" name="txtPhone" placeholder="Please Enter Phone Number" />
+                            </div>
+
                             <div class="form-group">
                                 <label>User Level</label>
                                 <label class="radio-inline">

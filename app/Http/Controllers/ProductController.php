@@ -61,15 +61,15 @@ class ProductController extends Controller
     }
     public function postEdit(Request $request,$id){
         $product=Product::find($id);
-        // $product->name = $request->txtName;
-        // $product->alias = changeTitle($request->txtName);
-        // $product->price = $request->txtPrice;
-        // $product->price_new = $request->txtPriceNew;
-        // $product->status = $request->txtStatus;
-        // $product->intro = $request->txtIntro;
-        // $product->content = $request->txtContent;
-        // $product->description = $request->txtDescription;
-        // $product->cate_id = $request->txtCateId;
+        $product->name = $request->txtName;
+        $product->alias = changeTitle($request->txtName);
+        $product->price = $request->txtPrice;
+        $product->price_new = $request->txtPriceNew;
+        $product->status = $request->txtStatus;
+        $product->intro = $request->txtIntro;
+        $product->content = $request->txtContent;
+        $product->description = $request->txtDescription;
+        $product->cate_id = $request->txtCateId;
         if($request->hasFile('fImages'))
         {   
            

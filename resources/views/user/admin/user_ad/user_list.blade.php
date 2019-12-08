@@ -22,30 +22,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="odd gradeX" align="center">
-                                <td>1</td>
-                                <td>quoctuan</td>
-                                <td>Superadmin</td>
-                                <td>Hiện</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-                            </tr>
-                            <tr class="even gradeC" align="center">
-                                <td>2</td>
-                                <td>kutun</td>
-                                <td>Admin</td>
-                                <td>Ẩn</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-                            </tr>
-                            <tr class="odd gradeX" align="center">
-                                <td>3</td>
-                                <td>kuteo</td>
-                                <td>Member</td>
-                                <td>Hiện</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-                            </tr>
+                             @foreach ($user as $us)
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{$us->id}}</td>
+                                    <td>{{$us->username}}</td>
+                                    <td>
+                                        @if($us->level==1)
+                                        {{"admin"}}
+                                        @else
+                                        {{"thường"}}
+                                        @endif
+                                    </td>
+                                    <td>{{$us->status}}</td>
+                                    <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick=" return xacnhanxoa('Are you sure you want to delete?')" href="admin/user/delete/{{$us->id}}"> Delete</a></td>
+                                    <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/user/edit/{{$us->id}}">Edit</a></td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

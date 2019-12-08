@@ -20,6 +20,8 @@ Route::get('chi-tiet-san-pham',['as'=>'chitietsanpham','uses'=>'PageController@g
 Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'PageController@getGioiThieu']);
 Route::get('thong-tin-don-hang',['as'=>'thongtindonhang','uses'=>'PageController@getThongTinDH']);
 Route::get('lien-he',['as'=>'lienhe','uses'=>'PageController@getLienHe']);
+Route::get('dang-nhap',['as'=>'dangnhap','uses'=>'PageController@getDangNhap']);
+Route::get('dang-ky',['as'=>'dangky','uses'=>'PageController@getDangKy']);
 Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'product'],function() {
 		Route::get('list',['as'=>'admin.product.list','uses'=>'ProductController@getList']);
@@ -42,7 +44,8 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('list',['as'=>'admin.user.list','uses'=>'UserController@getList']);
 		Route::get('add',['as'=>'admin.user.getAdd','uses'=>'UserController@getAdd']);
 		Route::post('add',['as'=>'admin.user.postAdd','uses'=>'UserController@postAdd']);
-		Route::get('edit',['as'=>'admin.user.getEdit','uses'=>'UserController@getEdit']);
+		Route::get('edit/{id}',['as'=>'admin.user.getEdit','uses'=>'UserController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.user.postEdit','uses'=>'UserController@postEdit']);
+		Route::get('delete/{id}',['as'=>'admin.user.getDelete','uses'=>'UserController@getDelete']);
 	});
 });

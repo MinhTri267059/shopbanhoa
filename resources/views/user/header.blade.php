@@ -10,8 +10,8 @@
 				<div class="pull-right auto-width-right">
 					<ul class="top-details menu-beta l-inline">
 						<li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
-						<li><a href="login.html">Đăng kí</a></li>
-						<li><a href="signup.html">Đăng nhập</a></li>
+						<li><a href="dang-ky">Đăng kí</a></li>
+						<li><a href="dang-nhap">Đăng nhập</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -70,23 +70,23 @@
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="index.html">Trang chủ</a></li>
-						<li><a href="#">Hoa Tươi</a>
+						<li><a href="index">Trang chủ</a></li>
+						<li><a href="loai-san-pham">Hoa Tươi</a>
 							<ul class="sub-menu">
 								<li><a href="product_type.html">Bó Hoa</a></li>
 								<li><a href="product_type.html">Lẵng Hoa</a></li>
 								<li><a href="product_type.html">Giỏ Hoa</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Hoa Khô</a>
+						<li><a href="loai-san-pham">Hoa Khô</a>
 							<ul class="sub-menu">
 								<li><a href="product_type.html">Hoa Giấy</a></li>
 								<li><a href="product_type.html">Hoa Sấy</a></li>
 								<li><a href="product_type.html">Hoa Giả</a></li>
 							</ul>
 						</li>
-						<li><a href="about.html">Giới thiệu</a></li>
-						<li><a href="contacts.html">Liên hệ</a></li>
+						<li><a href="gioi-thieu">Giới thiệu</a></li>
+						<li><a href="lien-he">Liên hệ</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</nav>
