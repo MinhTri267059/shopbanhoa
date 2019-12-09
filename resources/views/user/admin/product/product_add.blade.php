@@ -58,14 +58,14 @@
                                 <input type="file" name="fImages">
                             </div>
                         
-                            <div>
+                           <!--  <div>
                                 @for($i = 1; $i <= 3 ; $i++)
                                 <div class="form-group">
                                     <label>Product Image Detail {!! $i !!}</label>
                                     <input type="file" name="fProductDetail[]"/>
                                 </div>
                                 @endfor
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 <label>Product Description</label>
