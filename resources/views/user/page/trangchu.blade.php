@@ -28,259 +28,147 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="beta-products-list">
-							<center><h2>Hoa Khô</h2></center>
+							<center><h1>Bó Hoa</h1></center>
 							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
 							<div class="beta-products-details">
 								<div class="clearfix"></div>
 							</div>
 
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
-										<div class="single-item-header">
+							<div class="row wow fadeInRight" >
+								@foreach($product as $pro)
+									@if($pro->cate_id == 1)
+										<div class="col-sm-3">
+											<div class="single-item">
+												@if($pro->price > $pro->price_new)
+														<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+														<div class="single-item-header">
+												@else
+														<div class="single-item-header">
+												@endif
 
-											<a href="product.html"><img src="user/assets/dest/images/products/hoakho_baby.png" alt=""></a>
+													<a href="product.html"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
+												</div>
+												<div class="single-item-body">
+													<p class="single-item-title" >{{$pro->name}}</p>
+													@if($pro->price > $pro->price_new)
+														<p class="single-item-price">
+															<span class="flash-del">{{$pro->price }}</span>
+															<span class="flash-sale">{{$pro->price_new }}</span>
+														</p>
+													@else
+														<p class="single-item-price">
+															<span class="flash">{{$pro->price }}</span>						
+														</p>
+													@endif
+												</div>
+												<div class="single-item-caption">
+													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+													<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+													<div class="clearfix"></div>
+												</div>
+											</div>
 										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa Khô Baby</p>
-											<p class="single-item-price">
-												<span class="flash-del">120.000VND</span>
-												<span class="flash-sale">100.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
-
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoakho_glixia.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa Khô GliXia</p>
-											<p class="single-item-price">
-												<span class="flash-del">150.000VND</span>
-												<span class="flash-sale">120.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoakho_oaihuong.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa Khô Oải Hương</p>
-											<p class="single-item-price">
-												<span>90.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoakho_nhapkhau.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa Khô Nhập Khẩu</p>
-											<p class="single-item-price">
-												<span>150.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
+									@endif
+								@endforeach
+								
+								
 							</div>
 						</div> <!-- .beta-products-list -->
 
 						<div class="space50">&nbsp;</div>
 
 						<div class="beta-products-list">
-							<center><h2>Hoa Tươi</h2></center>
+							<center><h1>Lẵng Hoa</h1></center>
 							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
 							<div class="beta-products-details">
 								<div class="clearfix"></div>
 							</div>
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+							<div class="row wow fadeInLeft" >
+								@foreach($product as $pro)
+									@if($pro->cate_id == 2)
+										<div class="col-sm-3">
+											<div class="single-item">
+												@if($pro->price > $pro->price_new)
+														<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+														<div class="single-item-header">
+												@else
+														<div class="single-item-header">
+												@endif
 
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_1.png" alt=""></a>
+													<a href="product.html"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
+												</div>
+												<div class="single-item-body">
+													<p class="single-item-title" >{{$pro->name}}</p>
+													@if($pro->price > $pro->price_new)
+														<p class="single-item-price">
+															<span class="flash-del">{{$pro->price }}</span>
+															<span class="flash-sale">{{$pro->price_new }}</span>
+														</p>
+													@else
+														<p class="single-item-price">
+															<span class="flash">{{$pro->price }}</span>						
+														</p>
+													@endif
+												</div>
+												<div class="single-item-caption">
+													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+													<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+													<div class="clearfix"></div>
+												</div>
+											</div>
 										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 1</p>
-											<p class="single-item-price">
-												<span class="flash-del">150.000VND</span>
-												<span class="flash-sale">120.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
-
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_2.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 2</p>
-											<p class="single-item-price">
-												<span class="flash-del">180.000VND</span>
-												<span class="flash-sale">150.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_3.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 3</p>
-											<p class="single-item-price">
-												<span>100.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_4.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 4</p>
-											<p class="single-item-price">
-												<span>120.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
+									@endif
+								@endforeach							
+								
 							</div>
-							<div class="space40">&nbsp;</div>
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_5.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 5</p>
-											<p class="single-item-price">
-												<span>100.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+							<div class="space50">&nbsp;</div>
 
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_6.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 6</p>
-											<p class="single-item-price">
-												<span class="flash-del">200.000VND</span>
-												<span class="flash-sale">190.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
+							<div class="beta-products-list">
+								<center><h1>Giỏ Hoa</h1></center>
+								<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
+								<div class="beta-products-details">
+									<div class="clearfix"></div>
 								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_7.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 7</p>
-											<p class="single-item-price">
-												<span>150.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
+								<div class="row wow fadeInDown" >
+									@foreach($product as $pro)
+										@if($pro->cate_id == 3)
+											<div class="col-sm-3">
+												<div class="single-item">
+													@if($pro->price > $pro->price_new)
+														<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+														<div class="single-item-header">
+													@else
+														<div class="single-item-header">
+													@endif
+
+														<a href="product.html"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
+													</div>
+													<div class="single-item-body">
+														<p class="single-item-title" >{{$pro->name}}</p>
+														@if($pro->price > $pro->price_new)
+															<p class="single-item-price">
+																<span class="flash-del">{{$pro->price }}</span>
+																<span class="flash-sale">{{$pro->price_new }}</span>
+															</p>
+														@else
+															<p class="single-item-price">
+																<span class="flash">{{$pro->price }}</span>						
+															</p>
+														@endif
+													</div>
+
+													<div class="single-item-caption">
+														<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+														<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+											</div>
+										@endif
+									@endforeach							
+									
 								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="product.html"><img src="user/assets/dest/images/products/hoatuoi_8.png" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Hoa 8</p>
-											<p class="single-item-price">
-												<span>170.000VND</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-							</div>
+							
 						</div> <!-- .beta-products-list -->
 					</div>
 				</div> <!-- end section with sidebar and main content -->
