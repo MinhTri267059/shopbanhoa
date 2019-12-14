@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
-Route::get('loai-san-pham',['as'=>'loaisanpham','uses'=>'PageController@getLoaiSP']);
+
+Route::get('loai-san-pham/{id}',['as'=>'loaisanpham','uses'=>'PageController@getLoaiSP']);
+
+
 Route::get('chi-tiet-san-pham',['as'=>'chitietsanpham','uses'=>'PageController@getChiTietSP']);
 Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'PageController@getGioiThieu']);
 Route::get('thong-tin-don-hang',['as'=>'thongtindonhang','uses'=>'PageController@getThongTinDH']);

@@ -71,14 +71,14 @@
 				<nav class="main-menu">
 					<ul class="l-inline ov">
 						<li><a href="index">Trang chủ</a></li>
-						<li><a href="loai-san-pham">Hoa Tươi</a>
+						<li><a href="loai-san-pham">Sản phẩm</a>
 							<ul class="sub-menu">
-								<li><a href="product_type.html">Bó Hoa</a></li>
-								<li><a href="product_type.html">Lẵng Hoa</a></li>
-								<li><a href="product_type.html">Giỏ Hoa</a></li>
+								@foreach($category as $cate)
+								<li><a href="loai-san-pham/{{$cate->parent_id}}">{{$cate->name}}</a></li>
+								@endforeach
 							</ul>
 						</li>
-						<li><a href="loai-san-pham">Hoa Khô</a>
+						<!-- <li><a href="loai-san-pham">Hoa Khô</a> -->
 							<ul class="sub-menu">
 								<li><a href="product_type.html">Hoa Giấy</a></li>
 								<li><a href="product_type.html">Hoa Sấy</a></li>

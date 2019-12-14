@@ -27,16 +27,18 @@
 				<div class="space60">&nbsp;</div>
 				<div class="row">
 					<div class="col-sm-12">
+						
 						<div class="beta-products-list">
 							<center><h1>Bó Hoa</h1></center>
 							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
+						<!-- 	<p>Số sản phẩm tìm thấy {{count($product1)}}</p> -->
 							<div class="beta-products-details">
 								<div class="clearfix"></div>
 							</div>
 
 							<div class="row wow fadeInRight" >
-								@foreach($product as $pro)
-									@if($pro->cate_id == 1)
+								@foreach($product1 as $pro)
+									<!-- @if($pro->cate_id == 1) -->
 										<div class="col-sm-3">
 											<div class="single-item">
 												@if($pro->price > $pro->price_new)
@@ -68,7 +70,7 @@
 												</div>
 											</div>
 										</div>
-									@endif
+									<!-- @endif -->
 								@endforeach
 								
 								
@@ -79,13 +81,14 @@
 
 						<div class="beta-products-list">
 							<center><h1>Lẵng Hoa</h1></center>
-							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
+							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>
+							<!-- <p>Số sản phẩm tìm thấy {{count($product2)}}</p>	 -->
 							<div class="beta-products-details">
 								<div class="clearfix"></div>
 							</div>
 							<div class="row wow fadeInLeft" >
-								@foreach($product as $pro)
-									@if($pro->cate_id == 2)
+								@foreach($product2 as $pro)
+									<!-- @if($pro->cate_id == 2) -->
 										<div class="col-sm-3">
 											<div class="single-item">
 												@if($pro->price > $pro->price_new)
@@ -117,21 +120,22 @@
 												</div>
 											</div>
 										</div>
-									@endif
+									<!-- @endif -->
 								@endforeach							
 								
-							</div>
-							<div class="space50">&nbsp;</div>
+						</div>
+						<div class="space50">&nbsp;</div>
 
-							<div class="beta-products-list">
-								<center><h1>Giỏ Hoa</h1></center>
-								<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
-								<div class="beta-products-details">
-									<div class="clearfix"></div>
-								</div>
-								<div class="row wow fadeInDown" >
-									@foreach($product as $pro)
-										@if($pro->cate_id == 3)
+						<div class="beta-products-list">
+							<center><h1>Giỏ Hoa</h1></center>
+							<a href="product.html"><img src="user/assets/dest/images/ads/1.png" alt="ads1"></a>	
+						<!-- 	<p>Số sản phẩm tìm thấy {{count($product3)}}</p> -->
+							<div class="beta-products-details">
+								<div class="clearfix"></div>
+							</div>
+							<div class="row wow fadeInDown" >
+								@foreach($product3 as $pro)
+										<!-- @if($pro->cate_id == 3) -->
 											<div class="col-sm-3">
 												<div class="single-item">
 													@if($pro->price > $pro->price_new)
@@ -164,10 +168,10 @@
 													</div>
 												</div>
 											</div>
-										@endif
-									@endforeach							
+										<!-- @endif -->
+								@endforeach							
 									
-								</div>
+							</div>
 							
 						</div> <!-- .beta-products-list -->
 					</div>
