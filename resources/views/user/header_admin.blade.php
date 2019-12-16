@@ -53,6 +53,12 @@
 								<li><a href="admin/user/add">Add User</a></li>
 							</ul>
 						</li>
+						<li><a href="admin/comment/list">Comment</a>
+							<ul class="sub-menu">
+								<li><a href="admin/user/list">List User</a></li>
+								
+							</ul>
+						</li>
 						
 					</ul>
 					<div class="clearfix"></div>

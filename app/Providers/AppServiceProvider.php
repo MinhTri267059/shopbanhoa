@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Category;
-
+use App\Cart;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -28,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
         //     $category=Category::all();
         //     $view->with('category',$category);
         // })
+        
     }
 }

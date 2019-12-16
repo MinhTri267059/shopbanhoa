@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Slide;
 use App\Product;
 use App\Category;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -14,6 +15,8 @@ class PageController extends Controller
         $slide=Slide::all();
         $product=Product::all();
         $category=Category::all();
+        $comment=Comment::all();
+        View()->share('comment',$comment);
         view()->share('slide',$slide);
         view()->share('product',$product);
         view()->share('category',$category);
@@ -27,27 +30,16 @@ class PageController extends Controller
     	return view('user.page.trangchu',compact('product1','product2','product3'));
     }
     public function getLoaiSP($id){
-        if($id==1)
-        {
-            $product=Product::where('cate_id',1)->paginate(8);
-            return view('user.page.loai_sanpham',compact('product'));
-        }
-        if($id==2)
-        {
-            $product=Product::where('cate_id',2)->paginate(8);
-            return view('user.page.loai_sanpham',compact('product'));
-        }
-        if($id==3)
-        {
-            $product=Product::where('cate_id',3)->paginate(8);
-            return view('user.page.loai_sanpham',compact('product'));
-        }
-    	
+        
+    	$product=Product::where('cate_id',$id)->paginate(8);
+        return view('user.page.loai_sanpham',compact('product'));
     }
-    public function getChiTietSP($id){
+    public function getChiTietSP($cate,$id){
         $product=Product::where('id',$id)->get();
-
-    	return view('user.page.chitiet_sanpham',compact('product'));
+        $product1=Product::where('cate_id',$cate)->paginate(3);
+        $comment=Comment::where('pro_id',$id)->get();
+      
+    	return view('user.page.chitiet_sanpham',compact('product','product1','comment'));
     }
     public function getGioiThieu(){
     	return view('user.page.gioithieu');

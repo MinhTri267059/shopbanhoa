@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UserRequest;
+
 use App\User;
 class UserController extends Controller
 {
@@ -59,5 +61,8 @@ class UserController extends Controller
         $user->save();
         
         return redirect('admin/user/list')->with('thongbao','sửa thành công');  
+    }
+    public function getDangNhap(){
+        
     }
 }
