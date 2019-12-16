@@ -44,8 +44,10 @@ class PageController extends Controller
         }
     	
     }
-    public function getChiTietSP(){
-    	return view('user.page.chitiet_sanpham');
+    public function getChiTietSP($id){
+        $product=Product::where('id',$id)->get();
+
+    	return view('user.page.chitiet_sanpham',compact('product'));
     }
     public function getGioiThieu(){
     	return view('user.page.gioithieu');

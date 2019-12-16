@@ -65,7 +65,7 @@
 												</div>
 												<div class="single-item-caption">
 													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-													<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+													<a class="beta-btn primary" href="chi-tiet-san-pham/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 													<div class="clearfix"></div>
 												</div>
 											</div>
@@ -115,7 +115,7 @@
 												</div>
 												<div class="single-item-caption">
 													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-													<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+													<a class="beta-btn primary" href="chi-tiet-san-pham/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 													<div class="clearfix"></div>
 												</div>
 											</div>
@@ -163,7 +163,7 @@
 
 													<div class="single-item-caption">
 														<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
-														<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+														<a class="beta-btn primary" href="chi-tiet-san-pham/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 														<div class="clearfix"></div>
 													</div>
 												</div>

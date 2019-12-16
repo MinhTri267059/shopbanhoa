@@ -78,13 +78,13 @@
 								@endforeach
 							</ul>
 						</li>
-						<!-- <li><a href="loai-san-pham">Hoa Khô</a> -->
+						<!-- <li><a href="loai-san-pham">Hoa Khô</a>
 							<ul class="sub-menu">
 								<li><a href="product_type.html">Hoa Giấy</a></li>
 								<li><a href="product_type.html">Hoa Sấy</a></li>
 								<li><a href="product_type.html">Hoa Giả</a></li>
 							</ul>
-						</li>
+						</li> -->
 						<li><a href="gioi-thieu">Giới thiệu</a></li>
 						<li><a href="lien-he">Liên hệ</a></li>
 					</ul>
