@@ -5,6 +5,8 @@ use App\Slide;
 use App\Product;
 use App\Category;
 use App\Comment;
+use App\User;
+use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -56,5 +58,13 @@ class PageController extends Controller
     }
     public function getDangKy(){
         return view('user.signup');
+    }
+    public function getHome(){
+        $product=Product::all();
+        $category=Category::all();
+        $user=User::all();
+        $comment=Comment::all();
+        $order=Order::all();
+        return view('user.admin.dashbroad.home',compact('product','category','user','comment','order'));
     }
 }

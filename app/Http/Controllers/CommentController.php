@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use App\Comment;
 class CommentController extends Controller
 {
-	public function getList(){
-        $comment = Comment::all();
+    public function getList(){
+      $comment = Comment::all();
     	return view('user.admin.comment.comment_list',['comment'=>$comment]);
     }
     public function getDelete($id){

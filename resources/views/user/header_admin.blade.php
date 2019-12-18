@@ -34,7 +34,7 @@
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="#">Dashboard</a></li>
+						<li><a href="admin">Dashboard</a></li>
 						<li><a href="admin/category/list">Category</a>
 							<ul class="sub-menu">
 								<li><a href="admin/category/list">List Category</a></li>
@@ -59,7 +59,12 @@
 								
 							</ul>
 						</li>
-						
+						<li><a href="admin/order/list">Order</a>
+							<ul class="sub-menu">
+								<li><a href="admin/user/list">List Order</a></li>
+								
+							</ul>
+						</li>
 					</ul>
 					<div class="clearfix"></div>
 				</nav>

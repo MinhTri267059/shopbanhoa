@@ -14,8 +14,8 @@ use Auth;
 class ProductController extends Controller
 {
     public function getList(){
-    	 $product = Product::all();
-        return view('user.admin.product.product_list',['product'=>$product]);
+    	 $product = Product::all();        
+         return view('user.admin.product.product_list',['product'=>$product]);
     }
     public function getAdd(){
     	$category = Category::select('name','id','parent_id')->get()->toArray();

@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
+Route::get('admin',['as'=>'trang-admin','uses'=>'PageController@getHome']);
 
 Route::get('loai-san-pham/{id}',['as'=>'loaisanpham','uses'=>'PageController@getLoaiSP']);
 
@@ -25,9 +26,13 @@ Route::post('comment/{cate}/{id}','CommentController@postComment');
 Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'PageController@getGioiThieu']);
 Route::get('thong-tin-don-hang',['as'=>'thongtindonhang','uses'=>'PageController@getThongTinDH']);
 Route::get('lien-he',['as'=>'lienhe','uses'=>'PageController@getLienHe']);
+
 Route::get('dang-nhap',['as'=>'dangnhap','uses'=>'UserController@getDangNhap']);
 Route::get('dang-ky',['as'=>'dangky','uses'=>'PageController@getDangKy']);
+
+
 Route::group(['prefix'=>'admin'],function(){
+
 	Route::group(['prefix'=>'product'],function() {
 		Route::get('list',['as'=>'admin.product.list','uses'=>'ProductController@getList']);
 		Route::get('add',['as'=>'admin.product.getAdd','uses'=>'ProductController@getAdd']);
@@ -56,5 +61,9 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'comment'],function(){
 		Route::get('list',['as'=>'admin.comment.list','uses'=>'CommentController@getList']);
 		Route::get('delete/{id}',['as'=>'admin.comment.getDelete','uses'=>'CommentController@getDelete']);
+	});
+	Route::group(['prefix'=>'order'],function(){
+		Route::get('list',['as'=>'admin.order.list','uses'=>'OrderController@getList']);
+		Route::get('delete/{id}',['as'=>'admin.order.getDelete','uses'=>'OrderController@getDelete']);
 	});
 });
