@@ -1,5 +1,10 @@
 @extends('user.master')
 @section('content')	
+@if(session('thongbao'))
+    <div class="alert alert-success">
+        {{session('thongbao')}}
+    </div>
+@endif
 <div class="fullwidthbanner-container">
 					<div class="fullwidthbanner">
 						<div class="bannercontainer" >
@@ -64,7 +69,7 @@
 													@endif
 												</div>
 												<div class="single-item-caption">
-													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+													<a class="add-to-cart " href="addCart/{{$pro->id}}"><i class="fa fa-shopping-cart color-div"></i></a>
 													<a class="beta-btn primary" href="chi-tiet-san-pham/{{$pro->cate_id}}/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 													<div class="clearfix"></div>
 												</div>
@@ -114,7 +119,7 @@
 													@endif
 												</div>
 												<div class="single-item-caption">
-													<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+													<a class="add-to-cart " href="addCart/{{$pro->id}}"><i class="fa fa-shopping-cart color-div"></i></a>
 													<a class="beta-btn primary"  href="chi-tiet-san-pham/{{$pro->cate_id}}/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 													<div class="clearfix"></div>
 												</div>
@@ -162,7 +167,7 @@
 													</div>
 
 													<div class="single-item-caption">
-														<a class="add-to-cart " href="shopping_cart.html"><i class="fa fa-shopping-cart color-div"></i></a>
+														<a class="add-to-cart " href="addCart/{{$pro->id}}"><i class="fa fa-shopping-cart color-div"></i></a>
 														<a class="beta-btn primary"  href="chi-tiet-san-pham/{{$pro->cate_id}}/{{$pro->id}}">Details <i class="fa fa-chevron-right"></i></a>
 														<div class="clearfix"></div>
 													</div>

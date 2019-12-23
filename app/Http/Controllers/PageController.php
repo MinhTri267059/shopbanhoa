@@ -67,4 +67,19 @@ class PageController extends Controller
         $order=Order::all();
         return view('user.admin.dashbroad.home',compact('product','category','user','comment','order'));
     }
+    public function addCart($id){
+        $product=Product::where('id',$id)->get();
+        return view('user.page.dathang',compact('product'));
+    }
+    public function dathang(Request $request,$id,$val){
+        $product=Product::where('id',$id)->get();
+        $order=new order();
+        $order->total=$val;
+        $order->payment=$request->payment_method;
+        $order->name=$request->name;
+        $order->phone=$request->phone;
+        $order->address=$request->address;
+        $order->save();
+        return view('user.page.loai_sanpham')->with('thongbao','đặt hàng thành công');
+    }
 }

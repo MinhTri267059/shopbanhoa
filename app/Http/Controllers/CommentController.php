@@ -14,7 +14,7 @@ class CommentController extends Controller
     public function getDelete($id){
         $comment = Comment::find($id);
         $comment->delete();
-        return redirect('admin/comment/list')->with('thongbao','dã xóa thành công');
+        return redirect('admin/comment/list')->with('thongbao','Đã xóa thành công');
     }
     public function postComment($cate,$id, Request $request){
        $comment = new Comment;

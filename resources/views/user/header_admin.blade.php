@@ -55,13 +55,13 @@
 						</li>
 						<li><a href="admin/comment/list">Comment</a>
 							<ul class="sub-menu">
-								<li><a href="admin/user/list">List User</a></li>
+								<li><a href="admin/comment/list">List Comment</a></li>
 								
 							</ul>
 						</li>
 						<li><a href="admin/order/list">Order</a>
 							<ul class="sub-menu">
-								<li><a href="admin/user/list">List Order</a></li>
+								<li><a href="admin/order/list">List Order</a></li>
 								
 							</ul>
 						</li>

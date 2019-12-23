@@ -39,7 +39,7 @@ class UserController extends Controller
         //     return redirect('admin/user/list')->with('thongbao','không được xóa '); 
         // }else{
             $user->delete($id);
-            return redirect()->route('admin.user.list')->with(['flash_level'=>'success','flash_message'=>'Delete User Complete Success!']);
+            return redirect()->route('admin.user.list')->with('thongbao','xóa thành công');
         // }
     }
     public function getEdit($id){

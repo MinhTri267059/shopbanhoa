@@ -31,6 +31,9 @@ Route::get('dang-nhap',['as'=>'dangnhap','uses'=>'UserController@getDangNhap']);
 Route::get('dang-ky',['as'=>'dangky','uses'=>'PageController@getDangKy']);
 
 
+Route::get('addCart/{id}',['as'=>'addCart','uses'=>'PageController@addCart']);
+Route::get('dathang/{id}',['as'=>'dathang','uses'=>'OrderController@dathang']);
+
 Route::group(['prefix'=>'admin'],function(){
 
 	Route::group(['prefix'=>'product'],function() {

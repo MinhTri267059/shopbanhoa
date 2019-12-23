@@ -1,4 +1,3 @@
-
 @extends('user.master_admin')
 @section('content')
 <div id="page-wrapper">
@@ -10,6 +9,11 @@
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
+                    @if(session('thongbao'))
+                            <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                    @endif
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr align="center">
@@ -25,7 +29,7 @@
                              @foreach ($user as $us)
                                 <tr class="odd gradeX" align="center">
                                     <td>{{$us->id}}</td>
-                                    <td>{{$us->username}}</td>s
+                                    <td>{{$us->username}}</td>
                                     <td>
                                         @if($us->level==1)
                                         {{"admin"}}

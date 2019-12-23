@@ -23,7 +23,16 @@ class ProductController extends Controller
     }
 
     public function postAdd(Request $request) {
-
+        $this->validate($request,[
+            'txtName'=>'required|unique:Product,name|min:3|max:100'
+        ],
+        [
+            'txtName.required'=>'Bạn chưa nhập tên thể loại',
+            'txtName.unique'=>'Tên thể loại đã tồn tại',
+            'txtName.min'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự ',
+            'txtName.max'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự',
+        ]
+        );
         $file= $request->file('fImages');
         $file_name = $file->getClientOriginalName();
         $file->move('../resources/upload',$file_name);
@@ -50,7 +59,7 @@ class ProductController extends Controller
         //             $product_img->save();
         //         }
         //     }
-        // }       
+        // }       #
         
         $product->save();
         return redirect('admin/product/add')->with('thongbao','Thêm thành công');        
@@ -62,6 +71,16 @@ class ProductController extends Controller
     }
     public function postEdit(Request $request,$id){
         $product=Product::find($id);
+        $this->validate($request,[
+            'txttxtName'=>'required|unique:Product,name|min:3|max:100'
+        ],
+        [
+            'txtName.required'=>'Bạn chưa nhập tên thể loại',
+            'txtName.unique'=>'Tên thể loại đã tồn tại',
+            'txtName.min'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự ',
+            'txtName.max'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự',
+        ]
+        );
         $product->name = $request->txtName;
         $product->alias = changeTitle($request->txtName);
         $product->price = $request->txtPrice;

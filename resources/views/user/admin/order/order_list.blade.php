@@ -10,12 +10,12 @@
     <thead>
         <tr align="center">
             <th>STT</th>
-            <th>Date Order</th>
             <th>Total</th>
             <th>Payment</th>
-            <th>Status</th>
-            <th>Note</th>
-            <th>Customer</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Product Name</th>
             <th>Action</th>
             <th>Delete</th>
         </tr>
@@ -26,12 +26,12 @@
         <?php $stt = $stt + 1 ?>
         <tr class="" align="center">
             <td>{{$stt}}</td>
-            <td>{{$ord->date_order}}</td>
             <td>{{$ord->total}}</td>
-            <td>{{$ord->status}}</td>
             <td>{{$ord->payment}}</td>
-            <td>{{$ord->note}}</td>
-            <td>{{$ord->user_id}}</td>
+            <td>{{$ord->name}}</td>
+            <td>{{$ord->phone}}</td>
+            <td>{{$ord->address}}</td>
+            <td>{{$ord->product_name}}</td>
             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Detail</a></td>
             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick=" return xacnhanxoa('Are you sure you want to delete?')" href="admin/order/delete/{{$ord->id}}">Delete</a></td>
         </tr>

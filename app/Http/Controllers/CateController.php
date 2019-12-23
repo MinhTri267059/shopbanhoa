@@ -30,7 +30,7 @@ class CateController extends Controller
         $category->parent_id=$request->txtParentID;
         $category->alias= changeTitle($request->txtCateName);
         $category->description=$request->txtDescription;
-        $category->save();
+        $category->save();#
 
         return redirect('admin/category/list')->with('thongbao','Thêm thành công');
     	//return view('user.admin.category.cate_add');
@@ -61,6 +61,6 @@ class CateController extends Controller
     public function getDelete($id){
         $category = Category::find($id);
         $category->delete();
-        return redirect('admin/category/list')->with('thongbao','dã xóa thành công');
+        return redirect('admin/category/list')->with('thongbao','Đã xóa thành công');
     }
 }
