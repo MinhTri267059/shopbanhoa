@@ -18,6 +18,12 @@ class OrderController extends Controller
         return redirect('admin/order/list')->with('thongbao','Đã xóa thành công');
     }
     public function dathang(Request $request,$id){
+        $this->validate($request,[
+           
+            'phone' => 'required|numeric'
+        ],['phone.required'=>'Số điện thoại của bạn nhập không đúng']
+       
+        );
        	$product=Product::find($id);
         $order=new Order();
         $order->total=$product->price_new;

@@ -21,7 +21,7 @@ class UserController extends Controller
            // 'txtUser'=>'required|unique:User,name|min:3|max:100',
             'txtEmail'=> 'required|email',
             'txtPass'=> 'required|numeric|min:6',
-            'txtPhone' => 'required|numeric|size:11'
+            'txtPhone' => 'required|numeric'
         ],
         [
             // 'txtUser.required'=>'Bạn chưa nhập tên ',
@@ -30,6 +30,7 @@ class UserController extends Controller
             'txtUser.min'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự ',
             'txtUser.max'=>'Tên thể loại phải có độ dài từ 3 ký tự cho đến 100 ký tự',
             'txtPass.min'=>'Mật khẩu phải có độ dài ít nhất 3 ký tự ',
+           
         ]);
     	$user = new User();
         $user->username = $request->txtUser;

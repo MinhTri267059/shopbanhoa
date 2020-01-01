@@ -1,7 +1,14 @@
 @extends('user.master')
 @section('content')
 <div id="content" style="margin-left: 30px; margin-right:30px;">
-            @if(session('thongbao'))
+            @if(count($errors)>0)
+                            <div>
+                                @foreach($errors->all() as $err)
+                                    {{$err}}<br>
+                                @endforeach
+                            </div>
+                        @endif
+                        @if(session('thongbao'))
                             <div class="alert alert-success">
                                 {{session('thongbao')}}
                             </div>
