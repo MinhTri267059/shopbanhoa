@@ -103,7 +103,7 @@
 														<div class="single-item-header">
 												@endif
 
-													<a href="product.html"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
+													<a href="chi-tiet-san-pham/{{$pro->cate_id}}/{{$pro->id}}"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
 												</div>
 												<div class="single-item-body">
 													<p class="single-item-title" >{{$pro->name}}</p>
@@ -150,7 +150,7 @@
 														<div class="single-item-header">
 													@endif
 
-														<a href="product.html"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
+														<a href="chi-tiet-san-pham/{{$pro->cate_id}}/{{$pro->id}}"><img src="../resources/upload/{{$pro->image}}" alt=""></a>
 													</div>
 													<div class="single-item-body">
 														<p class="single-item-title" >{{$pro->name}}</p>

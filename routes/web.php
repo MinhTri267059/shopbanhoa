@@ -27,7 +27,7 @@ Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'PageController@getGioiThieu'
 Route::get('thong-tin-don-hang',['as'=>'thongtindonhang','uses'=>'PageController@getThongTinDH']);
 Route::get('lien-he',['as'=>'lienhe','uses'=>'PageController@getLienHe']);
 
-Route::get('dang-nhap',['as'=>'dangnhap','uses'=>'UserController@getDangNhap']);
+Route::get('dang-nhap',['as'=>'dangnhap','uses'=>'PageController@getDangNhap']);
 Route::get('dang-ky',['as'=>'dangky','uses'=>'PageController@getDangKy']);
 
 

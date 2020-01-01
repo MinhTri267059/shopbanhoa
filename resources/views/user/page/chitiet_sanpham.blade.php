@@ -64,7 +64,7 @@
 									<option value="4">4</option>
 									<option value="5">5</option>
 								</select>
-								<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+								<a class="add-to-cart" href="addCart/{{$pro->id}}"><i class="fa fa-shopping-cart"></i></a>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -82,7 +82,7 @@
 						</div>
 						<div class="panel" id="tab-reviews">
 							@foreach($comment as $cmt)
-							<p>{{$cmt->description}}  {{$cmt->created_at}}</p>
+							<p>{{$cmt->description}}       -     {{$cmt->created_at}}</p>
 							@endforeach
 						</div>
 					</div>

@@ -32,10 +32,7 @@
                                 <label>Password</label>
                                 <input type="password" class="form-control" name="txtPass" placeholder="Please Enter Password"  />
                             </div>
-                            <div class="form-group">
-                                <label>RePassword</label>
-                                <input type="password" class="form-control" name="txtRePass" placeholder="Please Enter RePassword" />
-                            </div>
+                            
                             <div class="form-group">
                                 <label>Full Name</label>
                                 <input type="text" class="form-control" name="txtFName" placeholder="Please Enter Full Name" value="{{$user->fullname}}" />

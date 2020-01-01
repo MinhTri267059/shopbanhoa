@@ -51,7 +51,7 @@
 						<li><a href="loai-san-pham">Sản phẩm</a>
 							<ul class="sub-menu">
 								@foreach($category as $cate)
-								<li><a href="loai-san-pham/{{$cate->parent_id}}">{{$cate->name}}</a></li>
+								<li><a href="dathang/{{$pro->id}}">{{$cate->name}}</a></li>
 								@endforeach
 							</ul>
 						</li>
